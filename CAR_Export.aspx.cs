@@ -71,7 +71,7 @@ namespace ProjectOrganizer.Web.Car
             {
                 ErrorLog.WriteErrorLog("CAR", "CAR_Export.aspx", "Page_Load", ex.Message);
             }
-           
+
         }
 
         /// <summary>
@@ -196,16 +196,16 @@ namespace ProjectOrganizer.Web.Car
                     {
                         startingCarNumber = Convert.ToInt32(txtStartingCar.Text);
                         endingCarNumber = Convert.ToInt32(txtEndingCar.Text);
-                        lstCar = ((List<CAR>)ViewState["AllCar"]).Where(t => t.CarNumber >= startingCarNumber && t.CarNumber <= endingCarNumber).ToList();                          
+                        lstCar = ((List<CAR>)ViewState["AllCar"]).Where(t => t.CarNumber >= startingCarNumber && t.CarNumber <= endingCarNumber).ToList();
                     }
                     else if (string.IsNullOrEmpty(txtStartingCar.Text) && string.IsNullOrEmpty(txtEndingCar.Text))
                     {
-                        lstCar = ((List<CAR>)ViewState["AllCar"]);                        
+                        lstCar = ((List<CAR>)ViewState["AllCar"]);
                     }
                     else if (!string.IsNullOrEmpty(txtStartingCar.Text) && string.IsNullOrEmpty(txtEndingCar.Text))
                     {
                         startingCarNumber = Convert.ToInt32(txtStartingCar.Text);
-                        lstCar = ((List<CAR>)ViewState["AllCar"]).Where(t => t.CarNumber >= startingCarNumber).ToList();                       
+                        lstCar = ((List<CAR>)ViewState["AllCar"]).Where(t => t.CarNumber >= startingCarNumber).ToList();
                     }
                     else if (string.IsNullOrEmpty(txtEndingCar.Text) && !string.IsNullOrEmpty(txtEndingCar.Text))
                     {
@@ -426,7 +426,7 @@ namespace ProjectOrganizer.Web.Car
             catch (Exception ex)
             {
                 ErrorLog.WriteErrorLog("CAR", "CAR_Export.aspx", "grvCountResult_RowDataBound", ex.Message);
-            }            
+            }
         }
 
         /// <summary>
@@ -448,7 +448,7 @@ namespace ProjectOrganizer.Web.Car
             {
                 ErrorLog.WriteErrorLog("CAR", "CAR_Export.aspx", "imgBtnCloseCar_Click", ex.Message);
             }
-            
+
         }
 
         #endregion
@@ -869,7 +869,7 @@ namespace ProjectOrganizer.Web.Car
             {
                 throw ex;
             }
-           
+
         }
 
         /// <summary>
@@ -901,7 +901,7 @@ namespace ProjectOrganizer.Web.Car
             catch (Exception ex)
             {
                 throw ex;
-            }           
+            }
         }
 
         /// <summary>
@@ -938,13 +938,13 @@ namespace ProjectOrganizer.Web.Car
                     {
                         grvCountResult.DataSource = dtcount;
                         grvCountResult.DataBind();
-                    }                   
+                    }
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
 
         private void GitHubClinetCommit()
@@ -952,11 +952,17 @@ namespace ProjectOrganizer.Web.Car
             int commitId;
             string commitName;
         }
-         private void WebGitCommit()
+        private void WebGitCommit()
         {
             int commitId;
             string commitName;
         }
-        #endregion       
+
+        private void WindowGitCommit()
+        {
+            int commitId;
+            string commitName;
+        }
+        #endregion
     }
 }

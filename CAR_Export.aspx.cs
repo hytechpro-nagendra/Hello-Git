@@ -952,6 +952,11 @@ namespace ProjectOrganizer.Web.Car
             int commitId;
             string commitName;
         }
+         private void WebGitCommit()
+        {
+            int commitId;
+            string commitName;
+        }
         #endregion       
     }
 }

@@ -946,6 +946,12 @@ namespace ProjectOrganizer.Web.Car
                 throw ex;
             }            
         }
+
+        private void GitHubClinetCommit()
+        {
+            int commitId;
+            string commitName;
+        }
         #endregion       
     }
 }
